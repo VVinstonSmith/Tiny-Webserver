@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sign in</title>
+    </head>
+    <body>
+<br/>
+<br/>
+    <div align="center"><font size="5"> <strong>登录</strong></font></div>
+    <br/>
+        <div class="login">
+            <form action="2CGISQL.cgi" method="post">
+                    <div align="center"><input type="text" name="user" placeholder="用户名" required="required"></div><br/>
+                    <div align="center"><input type="password" name="password" placeholder="登录密码" required="required"></div><br/>
+                    <div align="center">身份：
+                    <input type="radio" name="role" value="buyer" checked="checked">买家
+                    <input type="radio" name="role" value="seller">卖家
+                    <br/><br/>
+                    <div align="center"><button type="submit">登录</button></div>
+                </div>
+            </form>
+        <br/>
+        <form action="judge.html" method="post">
+            <div align="center"><button type="submit">返回</button></div>
+        </form>
+        <br/>
+            <div  align="center">提示：用户名或密码或身份错误，请重试</div>
+        </div>
+    </body>
+</html>
+

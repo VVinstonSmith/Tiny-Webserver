@@ -1,0 +1,48 @@
+
+发送url: / 转到 /judge
+
+/judge : 主页，
+发送url: 0 | POST请求 | 转到：/register.html
+发送url: 1 | POST请求 | 转到：/log.html
+
+/register:注册页面
+发送url: 3CGISQL.cgi | POST请求 | 转到：function*.html 或 registerError.html
+
+/log:登录页面
+发送url: 2CGISQL.cgi | POST请求 | 转到：function*.html 或 logError.html
+
+/function-buyer:买家功能页面
+发送url: search_item | POST请求 | 转到：search_item.html
+
+/function-seller:卖家功能页面
+发送url: create_item | POST请求 | 转到：function-seller.html
+
+/search_item.html:商品查询页面
+发送url: search | POST请求 | 
+
+/create_item.html:商品创建页面
+发送url: create | POST请求 | 
+
+
+(需要先进行身份选择)
+/0 : POST请求，跳转到注册页面 register.html
+/1 : POST请求，跳转到登录页面 log.html
+/2CGISQL.cgi : 
+  POST请求，进行登录校验
+  验证成功跳转到 welcome.html
+  验证失败跳转到 logError.html
+/3CGISQL.cgi : 
+  POST请求，进行注册校验
+  注册成功跳转到 log.html
+  注册失败跳转到 registerError.html
+
+(需要处于登录状态)
+/function 功能页面，根据role转到：
+  /function-buyer 买家
+  /function-seller 卖家
+
+/search_item 商品查询
+(需要处于登录状态，买身份)
+
+/create_item 商品创建
+(需要处于登录状态，卖家身份)
